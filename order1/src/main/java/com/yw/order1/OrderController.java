@@ -15,7 +15,6 @@ import java.util.List;
 public class OrderController {
     private final Logger logger = Logger.getLogger(getClass());
 
-
     @Qualifier("eurekaRegistration")
     @Autowired
     private Registration registration; // 服务注册
@@ -27,7 +26,7 @@ public class OrderController {
     public String order() {
         logger.info("==" + registration.getInstanceId());
         logger.info("==被调用了");
-        return "这是订单1服务";
+        return "==这是订单1服务";
     }
 
 }
